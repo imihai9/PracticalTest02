@@ -110,6 +110,13 @@ public class CommunicationThread extends Thread {
             System.out.println(pokemonTypes);
             printWriter.println(pokemonTypes);
             printWriter.flush();
+
+            JSONObject sprites = content.getJSONObject("sprites");
+            String spriteUrl = sprites.getString("front_default");
+            System.out.println(spriteUrl.toString());
+
+            printWriter.println(spriteUrl);
+            printWriter.flush();
         } catch (IOException ioException) {
             Log.e(Constants.TAG, "[COMMUNICATION THREAD] An exception has occurred: " + ioException.getMessage());
             if (Constants.DEBUG) {

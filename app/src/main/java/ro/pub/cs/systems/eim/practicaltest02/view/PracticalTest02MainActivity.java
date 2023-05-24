@@ -79,7 +79,7 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
 
             clientThread = new ClientThread(
                     clientAddress, Integer.parseInt(clientPort), pokemonName, pokemonAbilitiesTextView,
-                    pokemonTypesTextView
+                    pokemonTypesTextView, imageView
             );
             clientThread.start();
         }
